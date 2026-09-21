@@ -3,92 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>プライバシーポリシー — THIRTEEN</title>
+<title>プライバシーポリシー — チャイポオンライン</title>
 <meta name="robots" content="index,follow">
 <style>
-  :root{ --bg:#11131a; --panel:#1b1f2b; --txt:#eef1f7; --muted:#8b93a7; --accent:#ff3b3b; --gold:#ffd45a; --line:rgba(255,255,255,.12); }
+  :root{ --bg:#0B2220; --panel:#0F312D; --txt:#EAF2F0; --muted:#8FB0AB; --gold:#C9A24B; --line:#1C4A44; }
   *{ box-sizing:border-box; } html,body{ margin:0; }
-  body{ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
-    background:radial-gradient(120% 80% at 50% 0%, #1a1e2b 0%, var(--bg) 60%, #0a0b10 100%); color:var(--txt); line-height:1.75; min-height:100vh; }
+  body{ font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif; background:var(--bg); color:var(--txt); line-height:1.8; min-height:100vh; }
   .wrap{ max-width:760px; margin:0 auto; padding:32px 20px 64px; }
   header{ border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:8px; }
-  h1{ font-size:1.5rem; margin:.2em 0; } h2{ font-size:1.15rem; color:var(--gold); margin:1.8em 0 .4em; }
-  .lead{ color:var(--muted); } .meta{ color:var(--muted); font-size:.9rem; }
-  a{ color:var(--gold); } ul{ padding-left:1.2em; } li{ margin:.3em 0; }
-  .card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 18px; margin:.8em 0; }
-  .en{ color:var(--muted); font-size:.92rem; border-top:1px dashed var(--line); margin-top:48px; padding-top:24px; }
+  h1{ font-size:1.5rem; margin:.2em 0; } h2{ font-size:1.12rem; color:var(--gold); margin:1.9em 0 .4em; }
+  .lead,.meta{ color:var(--muted); } .meta{ font-size:.9rem; }
+  a{ color:var(--gold); } ul{ padding-left:1.2em; } li{ margin:.35em 0; }
+  .card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px 18px; margin:.9em 0; }
+  table{ border-collapse:collapse; width:100%; font-size:.93rem; } th,td{ border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; } th{ color:var(--gold); font-weight:600; white-space:nowrap; }
+  .en{ color:#c5d6d3; font-size:.94rem; border-top:1px dashed var(--line); margin-top:48px; padding-top:24px; }
+  nav{ font-size:.9rem; margin-top:10px; } nav a{ margin-right:16px; }
   footer{ margin-top:48px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:.85rem; }
-  code{ background:rgba(0,0,0,.3); padding:1px 6px; border-radius:6px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
   <h1>プライバシーポリシー</h1>
-  <p class="lead">THIRTEEN（以下「本アプリ」）</p>
-  <p class="meta">最終更新日: 2026年6月18日</p>
+  <p class="lead">チャイポオンライン / Chaipo Online（以下「本アプリ」）</p>
+  <p class="meta">最終更新日: 2026年9月22日</p>
+  <nav><a href="terms.html">利用規約 / Terms</a><a href="privacy-policy.html">プライバシーポリシー / Privacy</a><a href="https://rakkoapps.com/">らっこアプリ</a></nav>
 </header>
 
-<p>本アプリの開発者（以下「当方」）は、利用者のプライバシーを尊重します。本アプリは、ゲームの主要機能をオフラインで動作させ、収集する情報を最小限にとどめます。本ポリシーは、本アプリが情報をどのように扱うかを説明します。</p>
+<p>本アプリの開発者（らっこアプリ。以下「当方」）は、利用者のプライバシーを尊重し、扱う情報を必要最小限にとどめます。本ポリシーは、本アプリがどの情報を、何のために、どこへ送るかを説明します。</p>
 
-<div class="card"><strong>要点:</strong> 本アプリは氏名・メールアドレス等の個人情報を要求しません。一方で、無料提供のため <strong>Google AdMob による広告</strong>（バナー／インタースティシャル）を表示し、広告配信のために広告識別子（IDFA）を含む端末識別子等が利用されます（iOS では App Tracking Transparency の同意ダイアログを表示します）。<strong>オンライン対戦を利用する場合のみ</strong>、対戦に必要な最小限のデータが Google Firebase を介して通信されます。</div>
-
-<h2>1. 端末内に保存される情報</h2>
-<p>以下は<strong>利用者の端末内にのみ</strong>保存され、オフライン機能で外部送信されることはありません。</p>
+<div class="card"><strong>要点</strong>
 <ul>
-  <li>言語・難易度・サウンドのオン/オフ・プレイヤー名などの設定</li>
-  <li>「広告を消す」購入の有無（買い切り）</li>
+  <li>アカウント登録はありません。氏名・メールアドレス・電話番号・位置情報・連絡先・写真は取得しません。</li>
+  <li>CPU対戦は端末内だけで動きます。<strong>オンライン対戦・ランクマッチを使うときだけ</strong>、対戦に必要な情報を Google Firebase（Realtime Database）へ送ります。</li>
+  <li><strong>ランクマッチで入力した名前・レート・勝敗数は、対戦相手と「世界ランキング」で他の利用者に公開されます。</strong>本名や連絡先を名前に入れないでください。</li>
+  <li>無料で提供するため Google AdMob の広告を表示します。広告のために広告識別子（IDFA）などが使われることがあります（iOS では許可を求めるダイアログが出ます）。</li>
+</ul></div>
+
+<h2>1. 端末内に保存する情報</h2>
+<ul>
+  <li>設定（言語・難易度・ルール・音のオン/オフ・入力した名前）</li>
+  <li>「広告を消す」の購入状態、チュートリアルや各種案内を表示済みかどうか</li>
+  <li>本アプリが端末内で無作為に生成した識別子（以下「アプリ内ID」）。氏名・Apple ID・端末固有の番号とは結びつきません。</li>
+  <li>ランクマッチの利用ルールへの同意の記録、ブロックした相手のアプリ内IDの一覧</li>
 </ul>
 
-<h2>2. オンライン対戦で扱う情報</h2>
-<p>オンライン対戦を選択した場合に限り、対戦の成立と進行のため、以下の情報がGoogle社の <strong>Firebase（Authentication / Realtime Database）</strong> を通じて送受信されます。</p>
+<h2>2. オンライン対戦・ランクマッチで送信する情報</h2>
+<p>送信先は Google 社の <strong>Firebase Realtime Database</strong> です。Firebase の認証機能（メール・電話番号等によるログイン）は使っていません。</p>
+<table>
+<tr><th>情報</th><th>目的</th><th>公開範囲・保存期間</th></tr>
+<tr><td>アプリ内ID</td><td>同じ利用者であることの識別（席の復帰、レート・スタミナの保持）</td><td>ランクマッチを利用した場合は、当方が削除するまで保存</td></tr>
+<tr><td>入力した名前（16文字まで）</td><td>対戦相手・世界ランキングでの表示</td><td><strong>対戦相手と世界ランキングで公開</strong>。当方が削除するまで保存</td></tr>
+<tr><td>レート、勝ち・負け・引き分けの数、対戦数</td><td>マッチングと世界ランキング</td><td><strong>世界ランキングで公開</strong>。当方が削除するまで保存</td></tr>
+<tr><td>スタミナの残数と更新時刻（購入ぶんを含む）</td><td>ランクマッチの回数管理、購入したスタミナの保持</td><td>非公開の用途。当方が削除するまで保存</td></tr>
+<tr><td>対局データ（部屋コード、配られた札、置いた札、手番、接続状態）</td><td>対局の進行</td><td>同じ部屋の相手にのみ共有。対局が終わると順次削除</td></tr>
+<tr><td>通報の記録（通報した側・された側のアプリ内ID、その時点の名前、選んだ理由、時刻）</td><td>不適切な名前・不正行為への対応</td><td>対応に必要な期間保存</td></tr>
+</table>
+<p>これらを広告や利用者のプロファイリングに使うことはありません。Firebase での取扱いは <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase のプライバシー情報</a> をご確認ください。</p>
+
+<h2>3. 通報・ブロック・問い合わせ</h2>
+<p>ランクマッチでは、ほかの利用者を通報・ブロックできます。通報・ブロックをしたとき、およびアプリ内の「問い合わせ」から送信したときは、その内容（問い合わせ文、対象の名前とアプリ内ID、理由、アプリのバージョンや言語などの動作状況、送信者のアプリ内ID）が Google Apps Script を経由して当方のメールへ届きます。対応とサービス改善のためだけに使います。</p>
+
+<h2>4. App内課金</h2>
+<p>本アプリには「広告を消す」（非消耗型）と「スタミナ」（消耗型）の App内課金があります。決済はすべて <strong>Apple 社（App Store）</strong> が処理し、当方がクレジットカード番号などの支払い情報や Apple ID を受け取ることはありません。購入したスタミナの残数は、上記 2 のとおりアプリ内IDにひもづけて保存します。</p>
+
+<h2>5. 広告（Google AdMob）</h2>
+<p>本アプリは Google の <strong>AdMob</strong> による広告（バナー・全画面・動画リワード）を表示します。広告の配信・測定・不正防止のため、AdMob とそのパートナーは、<strong>広告識別子（IDFA）を含む端末識別子</strong>、デバイス情報（機種・OS・言語など）、広告の表示・操作に関するデータ、国・地域レベルのおおよその位置、診断情報を取得・利用することがあります。</p>
+<p>iOS では、トラッキングに使う識別子（IDFA）の利用について <strong>App Tracking Transparency</strong> の許可ダイアログを表示します。許可しなくても本アプリの機能・内容は一切変わりません（広告は表示されますが、パーソナライズの精度が下がります）。設定は「設定 &gt; プライバシーとセキュリティ &gt; トラッキング」からいつでも変更できます。</p>
+<p>詳しくは <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告のしくみ</a>、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご確認ください。</p>
+
+<h2>6. お子様の利用</h2>
+<p>本アプリは個人情報の入力を求めません。利用者同士のチャットやメッセージの機能はありません。ランクマッチで入力する名前は他の利用者に公開されるため、お子様が利用する場合は、保護者の方が本名や連絡先を入れないようご確認ください。</p>
+
+<h2>7. データの削除</h2>
 <ul>
-  <li><strong>匿名認証ID</strong>: Firebaseが自動発行する匿名の識別子。氏名・メール等とは結びつきません。</li>
-  <li><strong>対戦データ</strong>: マッチング待機状態、対戦ルームの進行、各ラウンドの反応時間（ミリ秒）、勝敗・スコア。</li>
+  <li>端末内のデータは、本アプリを削除すると消えます。</li>
+  <li>ランクマッチの名前・レート・戦績・スタミナ・通報記録の削除を希望する場合は、<strong>アプリ内の「その他 &gt; 問い合わせ」から「データ削除希望」とお送りください</strong>（アプリ内IDが自動で添付されるので、本人確認に必要な情報を別途いただく必要がありません）。メール（<a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a>）でも受け付けます。確認後、すみやかに削除します。</li>
+  <li>購入済みのスタミナが残っている状態で削除すると、その残数も消えます（払い戻しはできません）。</li>
 </ul>
-<p>これらは対戦の実現のために一時的に使用されるもので、当方が広告・プロファイリング目的で利用することはありません。Firebaseの取扱いについては <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase のプライバシー情報</a> をご確認ください。</p>
 
-<h2>3. App内課金について</h2>
-<p>本アプリは、ガチャに使用する「勾玉」を購入できるApp内課金（消費型）を提供します。決済はすべて<strong>Apple社（App Store）が処理</strong>し、当方がクレジットカード番号・支払い情報・Apple IDを取得・保存することはありません。勾玉の残高やガチャ結果（スキン所持）は<strong>端末内にのみ</strong>保存されます。詳細は<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple社のプライバシーポリシー</a>をご確認ください。</p>
+<h2>8. 本ポリシーの変更</h2>
+<p>法令や本アプリの仕様変更に応じて改定することがあります。重要な変更はこのページで告知します。</p>
 
-<h2>4. 広告について（Google AdMob）</h2>
-<p>本アプリは、無料での提供のため、Google が提供する <strong>AdMob</strong> による広告（バナー／インタースティシャル）を表示します。広告の配信・測定のため、AdMob およびそのパートナーは次の情報を取得・利用する場合があります。</p>
-<ul>
-  <li><strong>広告識別子（IDFA）を含む端末識別子</strong>、デバイス情報（機種・OS・言語など）</li>
-  <li>広告との接触・操作データ、おおよその位置情報（国・地域レベル）、診断・パフォーマンス情報</li>
-</ul>
-<p>これらはパーソナライズド広告の配信、広告効果の測定、不正・無効トラフィックの防止のために使用されます。iOS では、トラッキングに用いる識別子（IDFA）の使用について <strong>App Tracking Transparency（ATT）</strong> の許可ダイアログを表示します。許可しない場合でも広告は表示されますが、パーソナライズの精度は低下します。設定は端末の「設定 &gt; プライバシーとセキュリティ &gt; トラッキング」からいつでも変更できます。</p>
-<p>AdMob／Google によるデータの取り扱いは <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告のしくみ</a>、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご確認ください。広告のパーソナライズは <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google 広告設定</a> から管理できます。</p>
-
-<h2>5. お子様の利用について</h2>
-<p>本アプリは個人情報の入力を求めません。オンライン対戦では利用者同士のテキストチャット等の自由なコミュニケーション機能はありません（タップ反応のみを比較します）。</p>
-
-<h2>6. データの削除</h2>
-<p>端末内のデータは本アプリを削除すると消去されます。オンラインの一時的な対戦データはマッチ終了後に不要となります。匿名IDに関する削除のご希望は下記までご連絡ください。</p>
-
-<h2>7. 本ポリシーの変更</h2>
-<p>本ポリシーは、法令や本アプリの仕様変更に応じて改定されることがあります。重要な変更は本ページで告知します。</p>
-
-<h2>8. お問い合わせ</h2>
-<p>メール: <a href="mailto:siosen323@gmail.com">siosen323@gmail.com</a></p>
+<h2>9. お問い合わせ</h2>
+<p>らっこアプリ（開発者: RAITO SASAGAWA）　メール: <a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a></p>
 
 <div class="en">
 <h1>Privacy Policy (English)</h1>
-<p class="meta">Last updated: June 14, 2026</p>
-<p>This Privacy Policy applies to <strong>THIRTEEN</strong> (the "App"). The developer ("we") respects your privacy and minimizes data collection. The App does not request personal information such as your name or email. To keep the App free, it shows <strong>Google AdMob</strong> ads (banner/interstitial), which may use device identifiers including the advertising identifier (IDFA); on iOS an App Tracking Transparency prompt is shown. Online versus mode communicates the minimum data needed for matches via Google Firebase.</p>
-<h2>1. Stored on Your Device</h2>
-<p>Rank (RP), records, selected skin and unlocks, and settings are stored <strong>only on your device</strong> and are not transmitted for offline features.</p>
-<h2>2. Online Play</h2>
-<p>To match and run a duel, the minimum data needed is sent via Google <strong>Firebase</strong> (Authentication / Realtime Database): an anonymous auth ID (not linked to your identity), room/matchmaking state, and per-round reaction times, scores, and results. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a>.</p>
-<h2>3. In-App Purchases</h2>
-<p>"Magatama" (used for gacha) can be purchased via Apple's In-App Purchase (consumable). All payments are handled by <strong>Apple</strong>; we never receive your payment details. Balances and gacha results are stored only on your device.</p>
-<h2>4. Advertising (Google AdMob)</h2>
-<p>To offer the App for free, we show ads (banner / interstitial) via Google <strong>AdMob</strong>. To serve and measure ads, AdMob and its partners may collect and use device identifiers including the advertising identifier (IDFA), device information, ad interaction data, coarse (country/region) location, and diagnostics, for ad personalization, measurement, and fraud prevention. On iOS, an <strong>App Tracking Transparency (ATT)</strong> prompt is shown for the use of tracking identifiers; ads are still shown if you decline, but personalization is reduced (change anytime in Settings &gt; Privacy &amp; Security &gt; Tracking). See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses data</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-<h2>5. Contact</h2>
-<p>For questions or anonymous-ID deletion requests: <a href="mailto:siosen323@gmail.com">siosen323@gmail.com</a></p>
+<p class="meta">Last updated: September 22, 2026</p>
+<p>This policy applies to <strong>Chaipo Online</strong> (the "App") by Rakko Apps ("we"). The App has no account registration and does not collect your real name, email address, phone number, location, contacts or photos.</p>
+<h2>1. Stored on your device</h2>
+<p>Settings (language, difficulty, rules, sound, the name you typed), the "Remove Ads" purchase state, a random identifier generated by the App (the "in-app ID", not linked to your identity, Apple ID or any hardware identifier), your agreement to the ranked-play rules, and the list of players you blocked.</p>
+<h2>2. Online play and ranked matches</h2>
+<p>Only when you use online play or ranked matches, the App sends the following to Google <strong>Firebase Realtime Database</strong> (Firebase Authentication is not used): the in-app ID; the name you typed (up to 16 characters); your rating, win/loss/draw counts and number of matches; your stamina balance and its timestamp (including purchased stamina); game data for the room you are in (room code, dealt and placed cards, turn, connection state); and reports you file (both players' in-app IDs, the name at that time, the selected reason, and the time).</p>
+<p><strong>Your name, rating and record are shown to your opponent and publicly on the World Ranking.</strong> Do not put your real name or contact details in your name. Game data is shared only with the player in the same room and is removed after the match. Profile, stamina and report data are kept until we delete them. We do not use any of this for advertising or profiling.</p>
+<h2>3. Reports, blocks and contact form</h2>
+<p>When you report or block a player, or send a message from the in-app contact form, the content (your message, the target's name and in-app ID, the reason, app version and state, and your in-app ID) is delivered to our email through Google Apps Script. It is used only to respond and to improve the App.</p>
+<h2>4. In-app purchases</h2>
+<p>The App offers "Remove Ads" (non-consumable) and "Stamina" (consumable). All payments are processed by <strong>Apple</strong>; we never receive your payment details or Apple ID. Purchased stamina is stored with your in-app ID as described above.</p>
+<h2>5. Advertising (Google AdMob)</h2>
+<p>The App shows banner, interstitial and rewarded ads via Google <strong>AdMob</strong>. AdMob and its partners may collect and use device identifiers including the advertising identifier (IDFA), device information, ad interaction data, coarse (country/region) location and diagnostics for ad delivery, measurement and fraud prevention. On iOS an <strong>App Tracking Transparency</strong> prompt is shown; the App works exactly the same whether or not you allow tracking. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information</a>.</p>
+<h2>6. Children</h2>
+<p>The App does not ask for personal information and has no chat or messaging. Because the ranked name is visible to other players, parents should make sure children do not enter real names or contact details.</p>
+<h2>7. Deleting your data</h2>
+<p>Uninstalling the App removes on-device data. To delete your ranked name, rating, record, stamina and reports, send "delete my data" from <strong>More &gt; Contact</strong> inside the App (your in-app ID is attached automatically), or email <a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a>. Any remaining purchased stamina is deleted with it and is not refundable.</p>
+<h2>8. Contact</h2>
+<p>Rakko Apps (developer: RAITO SASAGAWA) — <a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a></p>
 </div>
-
-<footer>© 2026 THIRTEEN. App ID: <code>com.raito.thirteen</code></footer>
+<footer>© 2026 らっこアプリ（RAITO SASAGAWA）. App: チャイポオンライン / Chaipo Online（<code>com.raito.thirteen</code>）</footer>
 </div>
 </body>
 </html>
