@@ -26,7 +26,7 @@
 <header>
   <h1>プライバシーポリシー</h1>
   <p class="lead">チャイポオンライン / Chaipo Online（以下「本アプリ」）</p>
-  <p class="meta">最終更新日: 2026年9月22日</p>
+  <p class="meta">最終更新日: 2026年9月27日</p>
   <nav><a href="terms.html">利用規約 / Terms</a><a href="privacy-policy.html">プライバシーポリシー / Privacy</a><a href="https://rakkoapps.com/">らっこアプリ</a></nav>
 </header>
 
@@ -36,33 +36,40 @@
 <ul>
   <li>アカウント登録はありません。氏名・メールアドレス・電話番号・位置情報・連絡先・写真は取得しません。</li>
   <li>CPU対戦は端末内だけで動きます。<strong>オンライン対戦・ランクマッチを使うときだけ</strong>、対戦に必要な情報を Google Firebase（Realtime Database）へ送ります。</li>
+  <li>ランクマッチ（通報・スタミナを含みます）では、本人以外がデータを書き換えられないよう、<strong>Firebase の匿名認証</strong>を使います。ログインは不要で、メールアドレス・電話番号・パスワードは使いません。</li>
   <li><strong>ランクマッチで入力した名前・レート・勝敗数は、対戦相手と「世界ランキング」で他の利用者に公開されます。</strong>本名や連絡先を名前に入れないでください。</li>
-  <li>無料で提供するため Google AdMob の広告を表示します。広告のために広告識別子（IDFA）などが使われることがあります（iOS では許可を求めるダイアログが出ます）。</li>
+  <li>ランクマッチのデータは、アプリ内の「ランクのデータを削除」からいつでもご自身で削除できます。</li>
+  <li>本アプリは Google AdMob の広告を表示します。広告のために広告識別子（IDFA）などが使われることがあります（iOS では許可を求めるダイアログが出ます）。</li>
 </ul></div>
 
 <h2>1. 端末内に保存する情報</h2>
 <ul>
   <li>設定（言語・難易度・ルール・音のオン/オフ・入力した名前）</li>
   <li>「広告を消す」の購入状態、チュートリアルや各種案内を表示済みかどうか</li>
-  <li>本アプリが端末内で無作為に生成した識別子（以下「アプリ内ID」）。氏名・Apple ID・端末固有の番号とは結びつきません。</li>
+  <li>本アプリが端末内で無作為に生成した識別子（以下「アプリ内ID」）と、その持ち主であることを示す値（同じく端末内で生成した乱数）。氏名・Apple ID・端末固有の番号とは結びつきません。</li>
   <li>ランクマッチの利用ルールへの同意の記録、ブロックした相手のアプリ内IDの一覧</li>
+  <li>購入したスタミナの反映待ち・反映済みの記録（App Store の取引ID）</li>
+  <li>進行中・直近のランクマッチの部屋コード（対局の途中でアプリを終了した場合に結果を記録するため、および部屋を片付けるため）</li>
+  <li>Firebase の匿名認証のサインイン状態（下記 2 の認証ID）</li>
 </ul>
 
 <h2>2. オンライン対戦・ランクマッチで送信する情報</h2>
-<p>送信先は Google 社の <strong>Firebase Realtime Database</strong> です。Firebase の認証機能（メール・電話番号等によるログイン）は使っていません。</p>
+<p>送信先は Google 社の <strong>Firebase Realtime Database</strong> です。ランクマッチ（通報とスタミナを含みます）では、あなたのデータを本人以外が書き換えたり削除したりできないようにするため、あわせて <strong>Firebase Authentication の匿名認証</strong>を使います。匿名認証は、端末ごとに Firebase が発行する無作為の識別子（以下「認証ID」）を使うだけで、メールアドレス・電話番号・パスワード・Apple ID は使いません。認証IDがほかの利用者の画面に表示されることはありません。オンライン対戦（ルームコードで遊ぶ対戦）と、ランクマッチ以外のCPU対戦では、匿名認証を使いません。</p>
 <table>
 <tr><th>情報</th><th>目的</th><th>公開範囲・保存期間</th></tr>
-<tr><td>アプリ内ID</td><td>同じ利用者であることの識別（席の復帰、レート・スタミナの保持）</td><td>ランクマッチを利用した場合は、当方が削除するまで保存</td></tr>
-<tr><td>入力した名前（16文字まで）</td><td>対戦相手・世界ランキングでの表示</td><td><strong>対戦相手と世界ランキングで公開</strong>。当方が削除するまで保存</td></tr>
-<tr><td>レート、勝ち・負け・引き分けの数、対戦数</td><td>マッチングと世界ランキング</td><td><strong>世界ランキングで公開</strong>。当方が削除するまで保存</td></tr>
-<tr><td>スタミナの残数と更新時刻（購入ぶんを含む）</td><td>ランクマッチの回数管理、購入したスタミナの保持</td><td>非公開の用途。当方が削除するまで保存</td></tr>
-<tr><td>対局データ（部屋コード、配られた札、置いた札、手番、接続状態）</td><td>対局の進行</td><td>同じ部屋の相手にのみ共有。対局が終わると順次削除</td></tr>
-<tr><td>通報の記録（通報した側・された側のアプリ内ID、その時点の名前、選んだ理由、時刻）</td><td>不適切な名前・不正行為への対応</td><td>対応に必要な期間保存</td></tr>
+<tr><td>アプリ内ID</td><td>同じ利用者であることの識別（席の復帰、レート・スタミナの保持）</td><td>世界ランキング・対局の部屋・待機情報のデータとともに、ほかの利用者のアプリから読めます（画面には表示しません）。ランクマッチを利用した場合は、「ランクのデータを削除」または当方が削除するまで保存</td></tr>
+<tr><td>認証ID と、アプリ内IDの持ち主であることを示す値（端末内で生成した乱数）</td><td>ほかの人があなたのアプリ内IDになりすまして、名前・レート・スタミナ（購入分を含む）を書き換えたり削除したりできないようにするため。通報した人の識別</td><td>持ち主であることを示す値と、アプリ内IDとの対応は非公開（ほかの利用者は読めません）で、「ランクのデータを削除」で削除されます。認証IDは下記の通報の記録にも含まれ、当方が削除するまで保存します</td></tr>
+<tr><td>入力した名前（16文字まで）</td><td>対戦相手・世界ランキングでの表示</td><td>ランクマッチでは<strong>対戦相手と世界ランキングで公開</strong>、オンライン対戦では同じ部屋の相手に表示。「ランクのデータを削除」または当方が削除するまで保存（対局の部屋に書いた名前は、部屋とともに削除）</td></tr>
+<tr><td>レート、勝ち・負け・引き分けの数、対戦数（あわせて、二重に記録しないための最後の対局の部屋コードと更新時刻）</td><td>マッチングと世界ランキング</td><td><strong>世界ランキングで公開</strong>。「ランクのデータを削除」または当方が削除するまで保存</td></tr>
+<tr><td>ランクマッチの待機情報（アプリ内ID、名前、レート、部屋コード、時刻）</td><td>対戦相手をさがすため</td><td>ランクマッチを利用中のほかの利用者のアプリが読めます。対戦が決まるか、さがすのをやめると削除します</td></tr>
+<tr><td>スタミナの残数と更新時刻（購入分を含む）</td><td>ランクマッチの回数管理、購入したスタミナの保持</td><td>非公開（ほかの利用者は読めません）。「ランクのデータを削除」または当方が削除するまで保存</td></tr>
+<tr><td>対局データ（部屋コード、席についた人の名前とアプリ内ID、ランクマッチではレート、配られた札、置いた札、手番、接続状態と接続が切れた時刻、部屋の作成・更新の時刻）</td><td>対局の進行</td><td>同じ部屋の相手と共有します（部屋コードを知っていれば読める状態で保存されます）。オンライン対戦の部屋は全員が退出するとアプリが削除し、残った部屋も当方が定期的に削除します（目安: 最終更新から30日）。ランクマッチの部屋は、両者が結果を記録した後に削除します。相手が結果の記録を済ませていない部屋は残ることがあり、作成から24時間を過ぎたものは当方が定期的に削除します</td></tr>
+<tr><td>通報の記録（ランクマッチでの通報。通報した人の認証ID、通報された人のアプリ内ID、その時点の名前、選んだ理由、時刻）</td><td>不適切な名前・不正行為への対応</td><td>通報された人ごとの記録は、件数を数えるため、ランクマッチを利用中のほかの利用者のアプリから読まれます。3件以上の通報を受けた名前は、当方が問題ないと確認したものを除き、自動で伏せます。認証IDから通報した人の名前やアプリ内IDをたどることはできません（Firebase 上の通報の記録には、通報した人のアプリ内IDや名前は含みません。当方への通知には、下記 3 のとおり送信者のアプリ内IDが付きます）。「ランクのデータを削除」では削除されず、対応に必要な期間保存します</td></tr>
 </table>
 <p>これらを広告や利用者のプロファイリングに使うことはありません。Firebase での取扱いは <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase のプライバシー情報</a> をご確認ください。</p>
 
 <h2>3. 通報・ブロック・問い合わせ</h2>
-<p>ランクマッチでは、ほかの利用者を通報・ブロックできます。通報・ブロックをしたとき、およびアプリ内の「問い合わせ」から送信したときは、その内容（問い合わせ文、対象の名前とアプリ内ID、理由、アプリのバージョンや言語などの動作状況、送信者のアプリ内ID）が Google Apps Script を経由して当方のメールへ届きます。対応とサービス改善のためだけに使います。</p>
+<p>ランクマッチとオンライン対戦では、ほかの利用者を通報・ブロックできます。通報・ブロックをしたとき、およびアプリ内の「その他 &gt; 広告を報告する」「その他 &gt; 問い合わせ」から送信したときは、その内容（問い合わせ文、対象の名前とアプリ内ID、理由、アプリのバージョン・言語・設定・端末の種類などの動作状況、送信者のアプリ内ID）が Google Apps Script を経由して当方の記録（Google スプレッドシート）に保存され、当方が確認します。対応とサービス改善のためだけに使います。ブロックした相手の一覧は端末内に保存します。</p>
 
 <h2>4. App内課金</h2>
 <p>本アプリには「広告を消す」（非消耗型）と「スタミナ」（消耗型）の App内課金があります。決済はすべて <strong>Apple 社（App Store）</strong> が処理し、当方がクレジットカード番号などの支払い情報や Apple ID を受け取ることはありません。購入したスタミナの残数は、上記 2 のとおりアプリ内IDにひもづけて保存します。</p>
@@ -73,13 +80,14 @@
 <p>詳しくは <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告のしくみ</a>、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> をご確認ください。</p>
 
 <h2>6. お子様の利用</h2>
-<p>本アプリは個人情報の入力を求めません。利用者同士のチャットやメッセージの機能はありません。ランクマッチで入力する名前は他の利用者に公開されるため、お子様が利用する場合は、保護者の方が本名や連絡先を入れないようご確認ください。</p>
+<p>本アプリは個人情報の入力を求めません。利用者同士のチャットやメッセージの機能はありません。ランクマッチやオンライン対戦で入力する名前は他の利用者に表示されるため、お子様が利用する場合は、保護者の方が本名や連絡先を入れないようご確認ください。</p>
 
 <h2>7. データの削除</h2>
 <ul>
   <li>端末内のデータは、本アプリを削除すると消えます。</li>
-  <li>ランクマッチの名前・レート・戦績・スタミナ・通報記録の削除を希望する場合は、<strong>アプリ内の「その他 &gt; 問い合わせ」から「データ削除希望」とお送りください</strong>（アプリ内IDが自動で添付されるので、本人確認に必要な情報を別途いただく必要がありません）。メール（<a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a>）でも受け付けます。確認後、すみやかに削除します。</li>
-  <li>購入済みのスタミナが残っている状態で削除すると、その残数も消えます（払い戻しはできません）。</li>
+  <li><strong>ランクマッチ画面の下部にある「ランクのデータを削除」から、いつでもご自身で、名前・レート・戦績・スタミナ（購入分を含む）・待機情報と、アプリ内IDの持ち主の登録を削除できます。</strong>世界ランキングからも消え、次の対戦は新しいアプリ内IDとプロフィールで始まります。端末内に保存した名前も消えます（利用ルールへの同意とブロックした相手の一覧は残ります）。</li>
+  <li>購入済みのスタミナが残っている状態で削除すると、その残数も消え、アプリ内で補填することはありません（返金の手続きは Apple 社の規約に従います）。</li>
+  <li>通報の記録は、不正への対応の証跡として残すため、上記の操作では削除されません。通報の記録の削除などのご要望は、アプリ内の「その他 &gt; 問い合わせ」またはメール（<a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a>）でご連絡ください。なお、アプリ内IDはほかの利用者のアプリからも読める情報のため、ランクのデータの削除は、本人以外が行えないよう上記のアプリ内の操作をご案内しています。</li>
 </ul>
 
 <h2>8. 本ポリシーの変更</h2>
@@ -90,24 +98,36 @@
 
 <div class="en">
 <h1>Privacy Policy (English)</h1>
-<p class="meta">Last updated: September 22, 2026</p>
-<p>This policy applies to <strong>Chaipo Online</strong> (the "App") by Rakko Apps ("we"). The App has no account registration and does not collect your real name, email address, phone number, location, contacts or photos.</p>
+<p class="meta">Last updated: September 27, 2026</p>
+<p>This policy applies to <strong>Chaipo Online</strong> (the "App") by Rakko Apps ("we"). The App has no account registration and does not collect your real name, email address, phone number, location, contacts or photos. CPU games run only on your device. You can delete your ranked data yourself at any time with "Delete ranked data" in the App.</p>
 <h2>1. Stored on your device</h2>
-<p>Settings (language, difficulty, rules, sound, the name you typed), the "Remove Ads" purchase state, a random identifier generated by the App (the "in-app ID", not linked to your identity, Apple ID or any hardware identifier), your agreement to the ranked-play rules, and the list of players you blocked.</p>
+<p>Settings (language, difficulty, rules, sound, the name you typed); the "Remove Ads" purchase state and whether tutorials and notices have been shown; a random identifier generated by the App (the "in-app ID", not linked to your identity, Apple ID or any hardware identifier) and a random value generated on your device that proves you own it; your agreement to the ranked-play rules and the list of players you blocked; records of purchased stamina waiting to be added or already added (App Store transaction IDs); the room code of an ongoing or recent ranked match (so that a match you left by closing the App can be recorded and the room cleaned up); and the Firebase anonymous sign-in state (the auth ID in section 2).</p>
 <h2>2. Online play and ranked matches</h2>
-<p>Only when you use online play or ranked matches, the App sends the following to Google <strong>Firebase Realtime Database</strong> (Firebase Authentication is not used): the in-app ID; the name you typed (up to 16 characters); your rating, win/loss/draw counts and number of matches; your stamina balance and its timestamp (including purchased stamina); game data for the room you are in (room code, dealt and placed cards, turn, connection state); and reports you file (both players' in-app IDs, the name at that time, the selected reason, and the time).</p>
-<p><strong>Your name, rating and record are shown to your opponent and publicly on the World Ranking.</strong> Do not put your real name or contact details in your name. Game data is shared only with the player in the same room and is removed after the match. Profile, stamina and report data are kept until we delete them. We do not use any of this for advertising or profiling.</p>
+<p>Only when you use online play or ranked matches, the App sends the following to Google <strong>Firebase Realtime Database</strong>. For ranked matches (including reports and stamina) the App also uses <strong>Firebase Authentication's anonymous sign-in</strong> so that nobody else can change or delete your data. It uses only a random identifier issued by Firebase for each device (the "auth ID"); no email address, phone number, password or Apple ID is used, and the auth ID is never shown to other players. Online play with room codes and CPU games outside ranked matches do not use it.</p>
+<ul>
+  <li><strong>In-app ID</strong> — to recognise you as the same player (returning to your seat, keeping your rating and stamina). Other players' apps can read it together with World Ranking, match-room and waiting-list data (it is not shown on screen). If you use ranked matches, it is kept until you use "Delete ranked data" or we delete it.</li>
+  <li><strong>Auth ID and a random value generated on your device that proves you own your in-app ID</strong> — so that nobody can impersonate your in-app ID to change or delete your name, rating or stamina (including purchased stamina), and to identify who filed a report. The ownership value and its link to your in-app ID are private (other players cannot read them) and are deleted by "Delete ranked data". The auth ID is also included in reports you file (see below) and is kept until we delete it.</li>
+  <li><strong>The name you typed (up to 16 characters)</strong> — shown to your opponent and <strong>publicly on the World Ranking</strong> in ranked matches, and to the players in the same room in online play. Kept until you use "Delete ranked data" or we delete it (names written to a match room are deleted with the room).</li>
+  <li><strong>Rating, win/loss/draw counts and number of matches</strong> (plus the room code and time of the last recorded match, to avoid recording it twice) — for matchmaking and the World Ranking; <strong>public on the World Ranking</strong>. Kept until you use "Delete ranked data" or we delete it.</li>
+  <li><strong>Ranked waiting-list entry</strong> (in-app ID, name, rating, room code, time) — to find an opponent. Readable by the apps of other players using ranked matches; deleted when a match is made or you stop searching.</li>
+  <li><strong>Stamina balance and its timestamp</strong> (including purchased stamina) — to limit ranked matches and keep purchased stamina. Private (other players cannot read it). Kept until you use "Delete ranked data" or we delete it.</li>
+  <li><strong>Game data</strong> (room code, the names and in-app IDs of the seated players, ratings in ranked matches, dealt and placed cards, turn, connection state and the time of a disconnect, the room's creation and update times) — to run the match. Shared with the other players in the same room and stored so that anyone who knows the room code can read it. An online-play room is deleted by the App when everyone has left, and leftover rooms are deleted by us periodically (about 30 days after their last update). A ranked room is deleted after both players have recorded the result; a room whose opponent has not finished recording the result may remain, and such rooms are deleted by us periodically once they are more than 24 hours old.</li>
+  <li><strong>Reports filed in ranked matches</strong> (the reporter's auth ID, the reported player's in-app ID, the name at that time, the selected reason, and the time) — to deal with objectionable names and cheating. The reports on each player can be read by the apps of other players using ranked matches so that they can be counted, and a name with three or more reports is hidden automatically unless we have confirmed it is fine. The auth ID cannot be traced to the reporter's name or in-app ID (these records do not contain the reporter's in-app ID or name; our notification described in section 3 includes the sender's in-app ID). Reports are not deleted by "Delete ranked data" and are kept as long as needed to handle them.</li>
+</ul>
+<p><strong>Your name, rating and record are shown to your opponent and publicly on the World Ranking.</strong> Do not put your real name or contact details in your name. We do not use any of this for advertising or profiling. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase's privacy information</a> for how Firebase handles data.</p>
 <h2>3. Reports, blocks and contact form</h2>
-<p>When you report or block a player, or send a message from the in-app contact form, the content (your message, the target's name and in-app ID, the reason, app version and state, and your in-app ID) is delivered to our email through Google Apps Script. It is used only to respond and to improve the App.</p>
+<p>You can report or block players in ranked matches and in online play. When you report or block a player, or send a message from More &gt; Report an ad or More &gt; Contact, the content (your message, the target's name and in-app ID, the reason, app state such as the app version, language, settings and device type, and your in-app ID) is saved to our records (a Google Sheets spreadsheet) through Google Apps Script and reviewed by us. It is used only to respond and to improve the App. The list of players you blocked is stored on your device.</p>
 <h2>4. In-app purchases</h2>
 <p>The App offers "Remove Ads" (non-consumable) and "Stamina" (consumable). All payments are processed by <strong>Apple</strong>; we never receive your payment details or Apple ID. Purchased stamina is stored with your in-app ID as described above.</p>
 <h2>5. Advertising (Google AdMob)</h2>
-<p>The App shows banner, interstitial and rewarded ads via Google <strong>AdMob</strong>. AdMob and its partners may collect and use device identifiers including the advertising identifier (IDFA), device information, ad interaction data, coarse (country/region) location and diagnostics for ad delivery, measurement and fraud prevention. On iOS an <strong>App Tracking Transparency</strong> prompt is shown; the App works exactly the same whether or not you allow tracking. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information</a>.</p>
+<p>The App shows banner, interstitial and rewarded ads via Google <strong>AdMob</strong>. AdMob and its partners may collect and use device identifiers including the advertising identifier (IDFA), device information, ad interaction data, coarse (country/region) location and diagnostics for ad delivery, measurement and fraud prevention. On iOS an <strong>App Tracking Transparency</strong> prompt is shown; the App works exactly the same whether or not you allow tracking (ads are still shown but are less personalised). You can change this at any time in Settings &gt; Privacy &amp; Security &gt; Tracking. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 <h2>6. Children</h2>
-<p>The App does not ask for personal information and has no chat or messaging. Because the ranked name is visible to other players, parents should make sure children do not enter real names or contact details.</p>
+<p>The App does not ask for personal information and has no chat or messaging. Because names entered for ranked matches and online play are visible to other players, parents should make sure children do not enter real names or contact details.</p>
 <h2>7. Deleting your data</h2>
-<p>Uninstalling the App removes on-device data. To delete your ranked name, rating, record, stamina and reports, send "delete my data" from <strong>More &gt; Contact</strong> inside the App (your in-app ID is attached automatically), or email <a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a>. Any remaining purchased stamina is deleted with it and is not refundable.</p>
-<h2>8. Contact</h2>
+<p>Uninstalling the App removes on-device data. You can delete your ranked name, rating, record, stamina (including purchased stamina), waiting-list entry and the ownership record of your in-app ID yourself at any time with <strong>"Delete ranked data" at the bottom of the Ranked match screen</strong>; you disappear from the World Ranking and your next match starts with a new in-app ID and profile. The name saved on your device is also cleared (your agreement to the rules and your block list remain). Any remaining purchased stamina is deleted with it and won't be restored in the app (refunds are handled under Apple's terms). Reports are kept as a record for handling abuse and are not deleted by this; for other requests, such as deleting reports, use More &gt; Contact in the App or email <a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a>. Because other players' apps can read in-app IDs, we direct requests to delete ranked data to the in-app button, which only you can use.</p>
+<h2>8. Changes to this policy</h2>
+<p>We may revise this policy when laws or the App change. Important changes will be announced on this page.</p>
+<h2>9. Contact</h2>
 <p>Rakko Apps (developer: RAITO SASAGAWA) — <a href="mailto:rakko9924@gmail.com">rakko9924@gmail.com</a></p>
 </div>
 <footer>© 2026 らっこアプリ（RAITO SASAGAWA）. App: チャイポオンライン / Chaipo Online（<code>com.raito.thirteen</code>）</footer>
